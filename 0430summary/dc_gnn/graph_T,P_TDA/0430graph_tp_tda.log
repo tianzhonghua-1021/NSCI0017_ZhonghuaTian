@@ -1,0 +1,559 @@
+No normalization for SPS. Feature removed!
+No normalization for AvgIpc. Feature removed!
+No normalization for NumAmideBonds. Feature removed!
+No normalization for NumAtomStereoCenters. Feature removed!
+No normalization for NumBridgeheadAtoms. Feature removed!
+No normalization for NumHeterocycles. Feature removed!
+No normalization for NumSpiroAtoms. Feature removed!
+No normalization for NumUnspecifiedAtomStereoCenters. Feature removed!
+No normalization for Phi. Feature removed!
+Skipped loading some Tensorflow models, missing a dependency. No module named 'tensorflow'
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:104: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:128: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, dZ):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:177: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:207: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, *dZ):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:287: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:304: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, dZ):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:352: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:371: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, *dZ):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:431: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:467: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_out):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:498: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:535: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, *grad_out):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:566: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:575: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, dy):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:595: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:603: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, dy):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:666: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:692: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+Skipped loading modules with transformers dependency. No module named 'transformers'
+cannot import name 'HuggingFaceModel' from 'deepchem.models.torch_models' (/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/deepchem/models/torch_models/__init__.py)
+Skipped loading modules with pytorch-lightning dependency, missing a dependency. No module named 'lightning'
+Skipped loading some Jax models, missing a dependency. No module named 'jax'
+Skipped loading some PyTorch models, missing a dependency. No module named 'tensorflow'
+have data and load from ./dmpnn_dataset_cache
+data have been saved in: ./dmpnn_dataset_cache
+valid data: 1720
+start training
+Epoch 1/500 | Loss: 1.008623
+Epoch 2/500 | Loss: 0.965664
+Epoch 3/500 | Loss: 0.937067
+Epoch 4/500 | Loss: 0.916114
+Epoch 5/500 | Loss: 0.896929
+Epoch 6/500 | Loss: 0.870933
+Epoch 7/500 | Loss: 0.845250
+Epoch 8/500 | Loss: 0.803721
+Epoch 9/500 | Loss: 0.804982
+Epoch 10/500 | Loss: 0.832800
+Epoch 11/500 | Loss: 0.790141
+Epoch 12/500 | Loss: 0.786988
+Epoch 13/500 | Loss: 0.741392
+Epoch 14/500 | Loss: 0.798877
+Epoch 15/500 | Loss: 0.727960
+Epoch 16/500 | Loss: 0.689603
+Epoch 17/500 | Loss: 0.722741
+Epoch 18/500 | Loss: 0.749846
+Epoch 19/500 | Loss: 0.700369
+Epoch 20/500 | Loss: 0.682205
+Epoch 21/500 | Loss: 0.698089
+Epoch 22/500 | Loss: 0.656768
+Epoch 23/500 | Loss: 0.702506
+Epoch 24/500 | Loss: 0.674944
+Epoch 25/500 | Loss: 0.651174
+Epoch 26/500 | Loss: 0.645360
+Epoch 27/500 | Loss: 0.631329
+Epoch 28/500 | Loss: 0.624059
+Epoch 29/500 | Loss: 0.612007
+Epoch 30/500 | Loss: 0.582818
+Epoch 31/500 | Loss: 0.577317
+Epoch 32/500 | Loss: 0.514792
+Epoch 33/500 | Loss: 0.541590
+Epoch 34/500 | Loss: 0.508933
+Epoch 35/500 | Loss: 0.537256
+Epoch 36/500 | Loss: 0.517005
+Epoch 37/500 | Loss: 0.543857
+Epoch 38/500 | Loss: 0.479724
+Epoch 39/500 | Loss: 0.498571
+Epoch 40/500 | Loss: 0.469202
+Epoch 41/500 | Loss: 0.435251
+Epoch 42/500 | Loss: 0.467477
+Epoch 43/500 | Loss: 0.479502
+Epoch 44/500 | Loss: 0.477120
+Epoch 45/500 | Loss: 0.433169
+Epoch 46/500 | Loss: 0.437122
+Epoch 47/500 | Loss: 0.438104
+Epoch 48/500 | Loss: 0.440200
+Epoch 49/500 | Loss: 0.435337
+Epoch 50/500 | Loss: 0.436040
+Epoch 51/500 | Loss: 0.388659
+Epoch 52/500 | Loss: 0.438943
+Epoch 53/500 | Loss: 0.405125
+Epoch 54/500 | Loss: 0.402501
+Epoch 55/500 | Loss: 0.410014
+Epoch 56/500 | Loss: 0.405874
+Epoch 57/500 | Loss: 0.377858
+Epoch 58/500 | Loss: 0.426158
+Epoch 59/500 | Loss: 0.388357
+Epoch 60/500 | Loss: 0.404505
+Epoch 61/500 | Loss: 0.405485
+Epoch 62/500 | Loss: 0.370471
+Epoch 63/500 | Loss: 0.417920
+Epoch 64/500 | Loss: 0.385510
+Epoch 65/500 | Loss: 0.359405
+Epoch 66/500 | Loss: 0.428459
+Epoch 67/500 | Loss: 0.412283
+Epoch 68/500 | Loss: 0.378397
+Epoch 69/500 | Loss: 0.390449
+Epoch 70/500 | Loss: 0.349798
+Epoch 71/500 | Loss: 0.380336
+Epoch 72/500 | Loss: 0.372747
+Epoch 73/500 | Loss: 0.357520
+Epoch 74/500 | Loss: 0.381805
+Epoch 75/500 | Loss: 0.383273
+Epoch 76/500 | Loss: 0.375492
+Epoch 77/500 | Loss: 0.366333
+Epoch 78/500 | Loss: 0.374906
+Epoch 79/500 | Loss: 0.390558
+Epoch 80/500 | Loss: 0.345114
+Epoch 81/500 | Loss: 0.365495
+Epoch 82/500 | Loss: 0.411395
+Epoch 83/500 | Loss: 0.334001
+Epoch 84/500 | Loss: 0.336336
+Epoch 85/500 | Loss: 0.363686
+Epoch 86/500 | Loss: 0.368343
+Epoch 87/500 | Loss: 0.343422
+Epoch 88/500 | Loss: 0.353315
+Epoch 89/500 | Loss: 0.343312
+Epoch 90/500 | Loss: 0.350629
+Epoch 91/500 | Loss: 0.469067
+Epoch 92/500 | Loss: 0.348040
+Epoch 93/500 | Loss: 0.327917
+Epoch 94/500 | Loss: 0.345393
+Epoch 95/500 | Loss: 0.342006
+Epoch 96/500 | Loss: 0.349019
+Epoch 97/500 | Loss: 0.350848
+Epoch 98/500 | Loss: 0.341817
+Epoch 99/500 | Loss: 0.341787
+Epoch 100/500 | Loss: 0.325679
+Epoch 101/500 | Loss: 0.335040
+Epoch 102/500 | Loss: 0.332466
+Epoch 103/500 | Loss: 0.337922
+Epoch 104/500 | Loss: 0.329539
+Epoch 105/500 | Loss: 0.347845
+Epoch 106/500 | Loss: 0.317706
+Epoch 107/500 | Loss: 0.325067
+Epoch 108/500 | Loss: 0.338958
+Epoch 109/500 | Loss: 0.333826
+Epoch 110/500 | Loss: 0.320424
+Epoch 111/500 | Loss: 0.331584
+Epoch 112/500 | Loss: 0.316781
+Epoch 113/500 | Loss: 0.323283
+Epoch 114/500 | Loss: 0.358795
+Epoch 115/500 | Loss: 0.351383
+Epoch 116/500 | Loss: 0.337765
+Epoch 117/500 | Loss: 0.318368
+Epoch 118/500 | Loss: 0.323107
+Epoch 119/500 | Loss: 0.328626
+Epoch 120/500 | Loss: 0.304764
+Epoch 121/500 | Loss: 0.309415
+Epoch 122/500 | Loss: 0.334846
+Epoch 123/500 | Loss: 0.334011
+Epoch 124/500 | Loss: 0.311680
+Epoch 125/500 | Loss: 0.326249
+Epoch 126/500 | Loss: 0.284571
+Epoch 127/500 | Loss: 0.321976
+Epoch 128/500 | Loss: 0.308597
+Epoch 129/500 | Loss: 0.312110
+Epoch 130/500 | Loss: 0.313011
+Epoch 131/500 | Loss: 0.303817
+Epoch 132/500 | Loss: 0.364033
+Epoch 133/500 | Loss: 0.310610
+Epoch 134/500 | Loss: 0.318776
+Epoch 135/500 | Loss: 0.294196
+Epoch 136/500 | Loss: 0.287081
+Epoch 137/500 | Loss: 0.287621
+Epoch 138/500 | Loss: 0.312623
+Epoch 139/500 | Loss: 0.307900
+Epoch 140/500 | Loss: 0.310149
+Epoch 141/500 | Loss: 0.294136
+Epoch 142/500 | Loss: 0.296044
+Epoch 143/500 | Loss: 0.311135
+Epoch 144/500 | Loss: 0.285559
+Epoch 145/500 | Loss: 0.287165
+Epoch 146/500 | Loss: 0.282987
+Epoch 147/500 | Loss: 0.300346
+Epoch 148/500 | Loss: 0.300287
+Epoch 149/500 | Loss: 0.319388
+Epoch 150/500 | Loss: 0.281009
+Epoch 151/500 | Loss: 0.279376
+Epoch 152/500 | Loss: 0.304256
+Epoch 153/500 | Loss: 0.304960
+Epoch 154/500 | Loss: 0.295826
+Epoch 155/500 | Loss: 0.288976
+Epoch 156/500 | Loss: 0.286517
+Epoch 157/500 | Loss: 0.290244
+Epoch 158/500 | Loss: 0.279179
+Epoch 159/500 | Loss: 0.279844
+Epoch 160/500 | Loss: 0.298090
+Epoch 161/500 | Loss: 0.270736
+Epoch 162/500 | Loss: 0.283761
+Epoch 163/500 | Loss: 0.284130
+Epoch 164/500 | Loss: 0.272521
+Epoch 165/500 | Loss: 0.293426
+Epoch 166/500 | Loss: 0.277552
+Epoch 167/500 | Loss: 0.287505
+Epoch 168/500 | Loss: 0.293511
+Epoch 169/500 | Loss: 0.267890
+Epoch 170/500 | Loss: 0.283186
+Epoch 171/500 | Loss: 0.272643
+Epoch 172/500 | Loss: 0.289584
+Epoch 173/500 | Loss: 0.279986
+Epoch 174/500 | Loss: 0.281943
+Epoch 175/500 | Loss: 0.287113
+Epoch 176/500 | Loss: 0.289574
+Epoch 177/500 | Loss: 0.269966
+Epoch 178/500 | Loss: 0.293661
+Epoch 179/500 | Loss: 0.278724
+Epoch 180/500 | Loss: 0.288247
+Epoch 181/500 | Loss: 0.267755
+Epoch 182/500 | Loss: 0.286848
+Epoch 183/500 | Loss: 0.276135
+Epoch 184/500 | Loss: 0.271631
+Epoch 185/500 | Loss: 0.268902
+Epoch 186/500 | Loss: 0.260231
+Epoch 187/500 | Loss: 0.288357
+Epoch 188/500 | Loss: 0.279756
+Epoch 189/500 | Loss: 0.277092
+Epoch 190/500 | Loss: 0.257688
+Epoch 191/500 | Loss: 0.191798
+Epoch 192/500 | Loss: 0.257311
+Epoch 193/500 | Loss: 0.263390
+Epoch 194/500 | Loss: 0.266346
+Epoch 195/500 | Loss: 0.266429
+Epoch 196/500 | Loss: 0.279407
+Epoch 197/500 | Loss: 0.274712
+Epoch 198/500 | Loss: 0.258420
+Epoch 199/500 | Loss: 0.250772
+Epoch 200/500 | Loss: 0.244453
+Epoch 201/500 | Loss: 0.266177
+Epoch 202/500 | Loss: 0.257044
+Epoch 203/500 | Loss: 0.248592
+Epoch 204/500 | Loss: 0.262762
+Epoch 205/500 | Loss: 0.259138
+Epoch 206/500 | Loss: 0.266731
+Epoch 207/500 | Loss: 0.258703
+Epoch 208/500 | Loss: 0.261120
+Epoch 209/500 | Loss: 0.282768
+Epoch 210/500 | Loss: 0.253588
+Epoch 211/500 | Loss: 0.268371
+Epoch 212/500 | Loss: 0.272689
+Epoch 213/500 | Loss: 0.251303
+Epoch 214/500 | Loss: 0.256995
+Epoch 215/500 | Loss: 0.259713
+Epoch 216/500 | Loss: 0.266385
+Epoch 217/500 | Loss: 0.250361
+Epoch 218/500 | Loss: 0.247425
+Epoch 219/500 | Loss: 0.260166
+Epoch 220/500 | Loss: 0.265100
+Epoch 221/500 | Loss: 0.249417
+Epoch 222/500 | Loss: 0.253194
+Epoch 223/500 | Loss: 0.228255
+Epoch 224/500 | Loss: 0.248122
+Epoch 225/500 | Loss: 0.244445
+Epoch 226/500 | Loss: 0.252761
+Epoch 227/500 | Loss: 0.253405
+Epoch 228/500 | Loss: 0.242526
+Epoch 229/500 | Loss: 0.235860
+Epoch 230/500 | Loss: 0.241694
+Epoch 231/500 | Loss: 0.247566
+Epoch 232/500 | Loss: 0.265063
+Epoch 233/500 | Loss: 0.237289
+Epoch 234/500 | Loss: 0.237530
+Epoch 235/500 | Loss: 0.246849
+Epoch 236/500 | Loss: 0.253084
+Epoch 237/500 | Loss: 0.236210
+Epoch 238/500 | Loss: 0.247261
+Epoch 239/500 | Loss: 0.227973
+Epoch 240/500 | Loss: 0.244452
+Epoch 241/500 | Loss: 0.225123
+Epoch 242/500 | Loss: 0.254423
+Epoch 243/500 | Loss: 0.251334
+Epoch 244/500 | Loss: 0.239533
+Epoch 245/500 | Loss: 0.238460
+Epoch 246/500 | Loss: 0.236507
+Epoch 247/500 | Loss: 0.248552
+Epoch 248/500 | Loss: 0.255018
+Epoch 249/500 | Loss: 0.256807
+Epoch 250/500 | Loss: 0.245422
+Epoch 251/500 | Loss: 0.238631
+Epoch 252/500 | Loss: 0.236824
+Epoch 253/500 | Loss: 0.232771
+Epoch 254/500 | Loss: 0.243578
+Epoch 255/500 | Loss: 0.264741
+Epoch 256/500 | Loss: 0.236860
+Epoch 257/500 | Loss: 0.240761
+Epoch 258/500 | Loss: 0.242332
+Epoch 259/500 | Loss: 0.241626
+Epoch 260/500 | Loss: 0.267417
+Epoch 261/500 | Loss: 0.237424
+Epoch 262/500 | Loss: 0.238872
+Epoch 263/500 | Loss: 0.217859
+Epoch 264/500 | Loss: 0.218626
+Epoch 265/500 | Loss: 0.229041
+Epoch 266/500 | Loss: 0.238240
+Epoch 267/500 | Loss: 0.230337
+Epoch 268/500 | Loss: 0.239663
+Epoch 269/500 | Loss: 0.212097
+Epoch 270/500 | Loss: 0.246912
+Epoch 271/500 | Loss: 0.230705
+Epoch 272/500 | Loss: 0.238172
+Epoch 273/500 | Loss: 0.196811
+Epoch 274/500 | Loss: 0.248014
+Epoch 275/500 | Loss: 0.227143
+Epoch 276/500 | Loss: 0.228569
+Epoch 277/500 | Loss: 0.240730
+Epoch 278/500 | Loss: 0.236383
+Epoch 279/500 | Loss: 0.220208
+Epoch 280/500 | Loss: 0.230913
+Epoch 281/500 | Loss: 0.216806
+Epoch 282/500 | Loss: 0.226777
+Epoch 283/500 | Loss: 0.229041
+Epoch 284/500 | Loss: 0.227804
+Epoch 285/500 | Loss: 0.219255
+Epoch 286/500 | Loss: 0.230603
+Epoch 287/500 | Loss: 0.212932
+Epoch 288/500 | Loss: 0.227784
+Epoch 289/500 | Loss: 0.239706
+Epoch 290/500 | Loss: 0.233236
+Epoch 291/500 | Loss: 0.252976
+Epoch 292/500 | Loss: 0.222976
+Epoch 293/500 | Loss: 0.210743
+Epoch 294/500 | Loss: 0.220488
+Epoch 295/500 | Loss: 0.219636
+Epoch 296/500 | Loss: 0.219797
+Epoch 297/500 | Loss: 0.218805
+Epoch 298/500 | Loss: 0.222832
+Epoch 299/500 | Loss: 0.225926
+Epoch 300/500 | Loss: 0.214905
+Epoch 301/500 | Loss: 0.244182
+Epoch 302/500 | Loss: 0.214412
+Epoch 303/500 | Loss: 0.220194
+Epoch 304/500 | Loss: 0.223946
+Epoch 305/500 | Loss: 0.236898
+Epoch 306/500 | Loss: 0.213979
+Epoch 307/500 | Loss: 0.215974
+Epoch 308/500 | Loss: 0.225275
+Epoch 309/500 | Loss: 0.223212
+Epoch 310/500 | Loss: 0.196655
+Epoch 311/500 | Loss: 0.219410
+Epoch 312/500 | Loss: 0.229108
+Epoch 313/500 | Loss: 0.215132
+Epoch 314/500 | Loss: 0.229226
+Epoch 315/500 | Loss: 0.216073
+Epoch 316/500 | Loss: 0.219433
+Epoch 317/500 | Loss: 0.220322
+Epoch 318/500 | Loss: 0.232870
+Epoch 319/500 | Loss: 0.211697
+Epoch 320/500 | Loss: 0.207716
+Epoch 321/500 | Loss: 0.219743
+Epoch 322/500 | Loss: 0.230743
+Epoch 323/500 | Loss: 0.244552
+Epoch 324/500 | Loss: 0.231779
+Epoch 325/500 | Loss: 0.210393
+Epoch 326/500 | Loss: 0.206533
+Epoch 327/500 | Loss: 0.225327
+Epoch 328/500 | Loss: 0.215242
+Epoch 329/500 | Loss: 0.210286
+Epoch 330/500 | Loss: 0.225865
+Epoch 331/500 | Loss: 0.217752
+Epoch 332/500 | Loss: 0.242635
+Epoch 333/500 | Loss: 0.217498
+Epoch 334/500 | Loss: 0.208135
+Epoch 335/500 | Loss: 0.208725
+Epoch 336/500 | Loss: 0.206761
+Epoch 337/500 | Loss: 0.216974
+Epoch 338/500 | Loss: 0.220795
+Epoch 339/500 | Loss: 0.200250
+Epoch 340/500 | Loss: 0.205046
+Epoch 341/500 | Loss: 0.176779
+Epoch 342/500 | Loss: 0.203836
+Epoch 343/500 | Loss: 0.212897
+Epoch 344/500 | Loss: 0.220840
+Epoch 345/500 | Loss: 0.219904
+Epoch 346/500 | Loss: 0.225659
+Epoch 347/500 | Loss: 0.206580
+Epoch 348/500 | Loss: 0.215484
+Epoch 349/500 | Loss: 0.214097
+Epoch 350/500 | Loss: 0.207682
+Epoch 351/500 | Loss: 0.210585
+Epoch 352/500 | Loss: 0.208291
+Epoch 353/500 | Loss: 0.202395
+Epoch 354/500 | Loss: 0.195969
+Epoch 355/500 | Loss: 0.224676
+Epoch 356/500 | Loss: 0.218932
+Epoch 357/500 | Loss: 0.213203
+Epoch 358/500 | Loss: 0.200890
+Epoch 359/500 | Loss: 0.205377
+Epoch 360/500 | Loss: 0.219859
+Epoch 361/500 | Loss: 0.203404
+Epoch 362/500 | Loss: 0.193451
+Epoch 363/500 | Loss: 0.189814
+Epoch 364/500 | Loss: 0.218467
+Epoch 365/500 | Loss: 0.201446
+Epoch 366/500 | Loss: 0.212800
+Epoch 367/500 | Loss: 0.216283
+Epoch 368/500 | Loss: 0.215258
+Epoch 369/500 | Loss: 0.206619
+Epoch 370/500 | Loss: 0.205680
+Epoch 371/500 | Loss: 0.207888
+Epoch 372/500 | Loss: 0.203049
+Epoch 373/500 | Loss: 0.227640
+Epoch 374/500 | Loss: 0.205709
+Epoch 375/500 | Loss: 0.210095
+Epoch 376/500 | Loss: 0.192228
+Epoch 377/500 | Loss: 0.199998
+Epoch 378/500 | Loss: 0.194808
+Epoch 379/500 | Loss: 0.204019
+Epoch 380/500 | Loss: 0.211503
+Epoch 381/500 | Loss: 0.189676
+Epoch 382/500 | Loss: 0.210721
+Epoch 383/500 | Loss: 0.196830
+Epoch 384/500 | Loss: 0.206069
+Epoch 385/500 | Loss: 0.209011
+Epoch 386/500 | Loss: 0.211212
+Epoch 387/500 | Loss: 0.214599
+Epoch 388/500 | Loss: 0.201298
+Epoch 389/500 | Loss: 0.222474
+Epoch 390/500 | Loss: 0.208166
+Epoch 391/500 | Loss: 0.165419
+Epoch 392/500 | Loss: 0.191847
+Epoch 393/500 | Loss: 0.190643
+Epoch 394/500 | Loss: 0.222562
+Epoch 395/500 | Loss: 0.191013
+Epoch 396/500 | Loss: 0.190767
+Epoch 397/500 | Loss: 0.217132
+Epoch 398/500 | Loss: 0.195764
+Epoch 399/500 | Loss: 0.210601
+Epoch 400/500 | Loss: 0.189719
+Epoch 401/500 | Loss: 0.201897
+Epoch 402/500 | Loss: 0.212270
+Epoch 403/500 | Loss: 0.204197
+Epoch 404/500 | Loss: 0.204138
+Epoch 405/500 | Loss: 0.234577
+Epoch 406/500 | Loss: 0.195636
+Epoch 407/500 | Loss: 0.210956
+Epoch 408/500 | Loss: 0.211185
+Epoch 409/500 | Loss: 0.201572
+Epoch 410/500 | Loss: 0.205953
+Epoch 411/500 | Loss: 0.206690
+Epoch 412/500 | Loss: 0.204041
+Epoch 413/500 | Loss: 0.205013
+Epoch 414/500 | Loss: 0.194830
+Epoch 415/500 | Loss: 0.202052
+Epoch 416/500 | Loss: 0.198587
+Epoch 417/500 | Loss: 0.215594
+Epoch 418/500 | Loss: 0.183794
+Epoch 419/500 | Loss: 0.189312
+Epoch 420/500 | Loss: 0.215749
+Epoch 421/500 | Loss: 0.192737
+Epoch 422/500 | Loss: 0.208254
+Epoch 423/500 | Loss: 0.181158
+Epoch 424/500 | Loss: 0.201965
+Epoch 425/500 | Loss: 0.203461
+Epoch 426/500 | Loss: 0.194363
+Epoch 427/500 | Loss: 0.205550
+Epoch 428/500 | Loss: 0.200906
+Epoch 429/500 | Loss: 0.199318
+Epoch 430/500 | Loss: 0.199470
+Epoch 431/500 | Loss: 0.198563
+Epoch 432/500 | Loss: 0.210512
+Epoch 433/500 | Loss: 0.189316
+Epoch 434/500 | Loss: 0.201724
+Epoch 435/500 | Loss: 0.195503
+Epoch 436/500 | Loss: 0.197187
+Epoch 437/500 | Loss: 0.186323
+Epoch 438/500 | Loss: 0.201284
+Epoch 439/500 | Loss: 0.199870
+Epoch 440/500 | Loss: 0.197343
+Epoch 441/500 | Loss: 0.167352
+Epoch 442/500 | Loss: 0.182603
+Epoch 443/500 | Loss: 0.197482
+Epoch 444/500 | Loss: 0.215054
+Epoch 445/500 | Loss: 0.205088
+Epoch 446/500 | Loss: 0.197777
+Epoch 447/500 | Loss: 0.201380
+Epoch 448/500 | Loss: 0.192189
+Epoch 449/500 | Loss: 0.198520
+Epoch 450/500 | Loss: 0.205633
+Epoch 451/500 | Loss: 0.191293
+Epoch 452/500 | Loss: 0.191014
+Epoch 453/500 | Loss: 0.212642
+Epoch 454/500 | Loss: 0.184949
+Epoch 455/500 | Loss: 0.200446
+Epoch 456/500 | Loss: 0.190935
+Epoch 457/500 | Loss: 0.193585
+Epoch 458/500 | Loss: 0.194025
+Epoch 459/500 | Loss: 0.197135
+Epoch 460/500 | Loss: 0.217434
+Epoch 461/500 | Loss: 0.208892
+Epoch 462/500 | Loss: 0.188281
+Epoch 463/500 | Loss: 0.181336
+Epoch 464/500 | Loss: 0.206040
+Epoch 465/500 | Loss: 0.201352
+Epoch 466/500 | Loss: 0.184630
+Epoch 467/500 | Loss: 0.211608
+Epoch 468/500 | Loss: 0.199823
+Epoch 469/500 | Loss: 0.185590
+Epoch 470/500 | Loss: 0.179537
+Epoch 471/500 | Loss: 0.196064
+Epoch 472/500 | Loss: 0.182957
+Epoch 473/500 | Loss: 0.219168
+Epoch 474/500 | Loss: 0.194438
+Epoch 475/500 | Loss: 0.208607
+Epoch 476/500 | Loss: 0.187150
+Epoch 477/500 | Loss: 0.197166
+Epoch 478/500 | Loss: 0.191527
+Epoch 479/500 | Loss: 0.193488
+Epoch 480/500 | Loss: 0.188663
+Epoch 481/500 | Loss: 0.196236
+Epoch 482/500 | Loss: 0.136924
+Epoch 483/500 | Loss: 0.191168
+Epoch 484/500 | Loss: 0.196195
+Epoch 485/500 | Loss: 0.195693
+Epoch 486/500 | Loss: 0.195301
+Epoch 487/500 | Loss: 0.188597
+Epoch 488/500 | Loss: 0.192139
+Epoch 489/500 | Loss: 0.197599
+Epoch 490/500 | Loss: 0.203840
+Epoch 491/500 | Loss: 0.147633
+Epoch 492/500 | Loss: 0.208639
+Epoch 493/500 | Loss: 0.198523
+Epoch 494/500 | Loss: 0.189989
+Epoch 495/500 | Loss: 0.200219
+Epoch 496/500 | Loss: 0.192354
+Epoch 497/500 | Loss: 0.188309
+Epoch 498/500 | Loss: 0.197764
+Epoch 499/500 | Loss: 0.204418
+Epoch 500/500 | Loss: 0.195568
+Training MAE: 0.0660
+Test MAE: 0.0690
+Start SHAP analysis
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [02:00<1:38:20, 120.42s/it]  4%|▍         | 2/50 [04:02<1:37:18, 121.64s/it]  6%|▌         | 3/50 [06:06<1:35:49, 122.34s/it]  8%|▊         | 4/50 [08:14<1:35:43, 124.86s/it] 10%|█         | 5/50 [10:28<1:36:00, 128.01s/it] 12%|█▏        | 6/50 [12:15<1:28:46, 121.05s/it] 14%|█▍        | 7/50 [14:14<1:26:13, 120.32s/it] 16%|█▌        | 8/50 [16:14<1:24:01, 120.03s/it] 18%|█▊        | 9/50 [18:11<1:21:21, 119.07s/it] 20%|██        | 10/50 [20:14<1:20:16, 120.41s/it] 22%|██▏       | 11/50 [22:20<1:19:22, 122.12s/it] 24%|██▍       | 12/50 [24:23<1:17:27, 122.32s/it] 26%|██▌       | 13/50 [26:26<1:15:33, 122.54s/it] 28%|██▊       | 14/50 [28:22<1:12:26, 120.75s/it] 30%|███       | 15/50 [30:10<1:08:08, 116.81s/it] 32%|███▏      | 16/50 [31:58<1:04:42, 114.18s/it] 34%|███▍      | 17/50 [33:45<1:01:39, 112.09s/it] 36%|███▌      | 18/50 [35:33<58:59, 110.59s/it]   38%|███▊      | 19/50 [37:21<56:50, 110.00s/it] 40%|████      | 20/50 [39:18<56:02, 112.07s/it] 42%|████▏     | 21/50 [41:22<55:56, 115.74s/it] 44%|████▍     | 22/50 [43:25<54:55, 117.70s/it] 46%|████▌     | 23/50 [45:26<53:31, 118.93s/it] 48%|████▊     | 24/50 [47:31<52:15, 120.61s/it] 50%|█████     | 25/50 [49:20<48:51, 117.28s/it] 52%|█████▏    | 26/50 [51:04<45:14, 113.12s/it] 54%|█████▍    | 27/50 [52:53<42:54, 111.95s/it] 56%|█████▌    | 28/50 [54:35<39:57, 108.97s/it] 58%|█████▊    | 29/50 [56:22<37:55, 108.35s/it] 60%|██████    | 30/50 [58:06<35:40, 107.03s/it] 62%|██████▏   | 31/50 [59:51<33:41, 106.38s/it] 64%|██████▍   | 32/50 [1:01:39<32:05, 106.99s/it] 66%|██████▌   | 33/50 [1:03:26<30:19, 107.00s/it] 68%|██████▊   | 34/50 [1:05:14<28:33, 107.09s/it] 70%|███████   | 35/50 [1:07:02<26:54, 107.63s/it] 72%|███████▏  | 36/50 [1:08:53<25:19, 108.51s/it] 74%|███████▍  | 37/50 [1:10:40<23:25, 108.13s/it] 76%|███████▌  | 38/50 [1:13:15<24:23, 121.98s/it] 78%|███████▊  | 39/50 [1:15:26<22:52, 124.76s/it] 80%|████████  | 40/50 [1:17:33<20:55, 125.59s/it] 82%|████████▏ | 41/50 [1:19:37<18:45, 125.00s/it] 84%|████████▍ | 42/50 [1:21:46<16:49, 126.18s/it] 86%|████████▌ | 43/50 [1:24:05<15:10, 130.05s/it] 88%|████████▊ | 44/50 [1:26:49<14:02, 140.38s/it] 90%|█████████ | 45/50 [1:28:42<10:59, 131.93s/it] 92%|█████████▏| 46/50 [1:31:07<09:03, 135.82s/it] 94%|█████████▍| 47/50 [1:33:16<06:41, 133.88s/it] 96%|█████████▌| 48/50 [1:35:03<04:11, 125.87s/it] 98%|█████████▊| 49/50 [1:36:52<02:00, 120.81s/it]100%|██████████| 50/50 [1:38:42<00:00, 117.51s/it]100%|██████████| 50/50 [1:38:42<00:00, 118.45s/it]

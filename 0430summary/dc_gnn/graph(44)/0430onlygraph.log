@@ -1,0 +1,638 @@
+No normalization for SPS. Feature removed!
+No normalization for AvgIpc. Feature removed!
+No normalization for NumAmideBonds. Feature removed!
+No normalization for NumAtomStereoCenters. Feature removed!
+No normalization for NumBridgeheadAtoms. Feature removed!
+No normalization for NumHeterocycles. Feature removed!
+No normalization for NumSpiroAtoms. Feature removed!
+No normalization for NumUnspecifiedAtomStereoCenters. Feature removed!
+No normalization for Phi. Feature removed!
+Skipped loading some Tensorflow models, missing a dependency. No module named 'tensorflow'
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:104: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:128: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, dZ):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:177: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:207: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, *dZ):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:287: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:304: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, dZ):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:352: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:371: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, *dZ):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:431: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:467: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_out):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:498: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:535: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, *grad_out):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:566: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:575: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, dy):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:595: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:603: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, dy):
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:666: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/dgl/backend/pytorch/sparse.py:692: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=th.float16)
+Skipped loading modules with transformers dependency. No module named 'transformers'
+cannot import name 'HuggingFaceModel' from 'deepchem.models.torch_models' (/home/ucaqzti/.conda/envs/deepchem_env/lib/python3.10/site-packages/deepchem/models/torch_models/__init__.py)
+Skipped loading modules with pytorch-lightning dependency, missing a dependency. No module named 'lightning'
+Skipped loading some Jax models, missing a dependency. No module named 'jax'
+Skipped loading some PyTorch models, missing a dependency. No module named 'tensorflow'
+none data, start to read the original csv file
+process: have done 10 files
+process: have done 20 files
+process: have done 30 files
+process: have done 40 files
+data have been saved in: ./dmpnn_dataset_cache
+valid data: 43
+start training
+Epoch 1/500 | Loss: 1.006493
+Epoch 2/500 | Loss: 1.000285
+Epoch 3/500 | Loss: 1.015140
+Epoch 4/500 | Loss: 1.011342
+Epoch 5/500 | Loss: 0.995979
+Epoch 6/500 | Loss: 1.016261
+Epoch 7/500 | Loss: 0.990493
+Epoch 8/500 | Loss: 1.003091
+Epoch 9/500 | Loss: 0.999993
+Epoch 10/500 | Loss: 1.002780
+Epoch 11/500 | Loss: 1.018735
+Epoch 12/500 | Loss: 0.997054
+Epoch 13/500 | Loss: 1.009218
+Epoch 14/500 | Loss: 1.000841
+Epoch 15/500 | Loss: 0.993720
+Epoch 16/500 | Loss: 0.999076
+Epoch 17/500 | Loss: 0.996184
+Epoch 18/500 | Loss: 0.999224
+Epoch 19/500 | Loss: 1.005254
+Epoch 20/500 | Loss: 1.003310
+Epoch 21/500 | Loss: 1.000739
+Epoch 22/500 | Loss: 1.006628
+Epoch 23/500 | Loss: 1.003694
+Epoch 24/500 | Loss: 0.993094
+Epoch 25/500 | Loss: 1.003851
+Epoch 26/500 | Loss: 0.989816
+Epoch 27/500 | Loss: 0.995622
+Epoch 28/500 | Loss: 1.003204
+Epoch 29/500 | Loss: 1.015719
+Epoch 30/500 | Loss: 1.010308
+Epoch 31/500 | Loss: 1.008785
+Epoch 32/500 | Loss: 1.010561
+Epoch 33/500 | Loss: 0.991967
+Epoch 34/500 | Loss: 1.001677
+Epoch 35/500 | Loss: 0.998223
+Epoch 36/500 | Loss: 1.009233
+Epoch 37/500 | Loss: 0.998630
+Epoch 38/500 | Loss: 1.013285
+Epoch 39/500 | Loss: 1.004291
+Epoch 40/500 | Loss: 0.997910
+Epoch 41/500 | Loss: 1.015775
+Epoch 42/500 | Loss: 1.002797
+Epoch 43/500 | Loss: 1.009641
+Epoch 44/500 | Loss: 1.002592
+Epoch 45/500 | Loss: 0.995089
+Epoch 46/500 | Loss: 1.000223
+Epoch 47/500 | Loss: 0.990344
+Epoch 48/500 | Loss: 1.002924
+Epoch 49/500 | Loss: 1.017300
+Epoch 50/500 | Loss: 1.008576
+Epoch 51/500 | Loss: 0.992406
+Epoch 52/500 | Loss: 0.996388
+Epoch 53/500 | Loss: 1.012843
+Epoch 54/500 | Loss: 1.008896
+Epoch 55/500 | Loss: 0.993743
+Epoch 56/500 | Loss: 1.007650
+Epoch 57/500 | Loss: 0.991258
+Epoch 58/500 | Loss: 1.006404
+Epoch 59/500 | Loss: 0.991125
+Epoch 60/500 | Loss: 1.000273
+Epoch 61/500 | Loss: 0.998278
+Epoch 62/500 | Loss: 0.989888
+Epoch 63/500 | Loss: 0.997352
+Epoch 64/500 | Loss: 0.997616
+Epoch 65/500 | Loss: 0.998987
+Epoch 66/500 | Loss: 0.997510
+Epoch 67/500 | Loss: 0.992985
+Epoch 68/500 | Loss: 0.998619
+Epoch 69/500 | Loss: 1.002870
+Epoch 70/500 | Loss: 0.997476
+Epoch 71/500 | Loss: 1.008437
+Epoch 72/500 | Loss: 1.005525
+Epoch 73/500 | Loss: 1.000657
+Epoch 74/500 | Loss: 1.003303
+Epoch 75/500 | Loss: 1.001622
+Epoch 76/500 | Loss: 1.013161
+Epoch 77/500 | Loss: 1.003375
+Epoch 78/500 | Loss: 1.004340
+Epoch 79/500 | Loss: 1.004631
+Epoch 80/500 | Loss: 0.999319
+Epoch 81/500 | Loss: 1.000095
+Epoch 82/500 | Loss: 0.997505
+Epoch 83/500 | Loss: 1.006905
+Epoch 84/500 | Loss: 1.010946
+Epoch 85/500 | Loss: 1.004304
+Epoch 86/500 | Loss: 0.997852
+Epoch 87/500 | Loss: 0.993583
+Epoch 88/500 | Loss: 1.000682
+Epoch 89/500 | Loss: 0.982907
+Epoch 90/500 | Loss: 1.010162
+Epoch 91/500 | Loss: 1.007341
+Epoch 92/500 | Loss: 0.989484
+Epoch 93/500 | Loss: 1.007840
+Epoch 94/500 | Loss: 0.995909
+Epoch 95/500 | Loss: 1.008807
+Epoch 96/500 | Loss: 1.013331
+Epoch 97/500 | Loss: 1.004978
+Epoch 98/500 | Loss: 1.005608
+Epoch 99/500 | Loss: 1.001048
+Epoch 100/500 | Loss: 1.004422
+Epoch 101/500 | Loss: 1.000314
+Epoch 102/500 | Loss: 1.018995
+Epoch 103/500 | Loss: 0.999355
+Epoch 104/500 | Loss: 1.001641
+Epoch 105/500 | Loss: 0.989873
+Epoch 106/500 | Loss: 0.986916
+Epoch 107/500 | Loss: 0.995906
+Epoch 108/500 | Loss: 1.001485
+Epoch 109/500 | Loss: 1.010159
+Epoch 110/500 | Loss: 1.021409
+Epoch 111/500 | Loss: 1.010703
+Epoch 112/500 | Loss: 1.004695
+Epoch 113/500 | Loss: 0.987822
+Epoch 114/500 | Loss: 0.989947
+Epoch 115/500 | Loss: 0.995815
+Epoch 116/500 | Loss: 0.983713
+Epoch 117/500 | Loss: 1.005622
+Epoch 118/500 | Loss: 1.002135
+Epoch 119/500 | Loss: 1.009736
+Epoch 120/500 | Loss: 1.000202
+Epoch 121/500 | Loss: 0.995464
+Epoch 122/500 | Loss: 0.990684
+Epoch 123/500 | Loss: 0.992786
+Epoch 124/500 | Loss: 0.995565
+Epoch 125/500 | Loss: 1.001851
+Epoch 126/500 | Loss: 1.000616
+Epoch 127/500 | Loss: 0.997370
+Epoch 128/500 | Loss: 0.996717
+Epoch 129/500 | Loss: 1.003110
+Epoch 130/500 | Loss: 1.008772
+Epoch 131/500 | Loss: 1.002938
+Epoch 132/500 | Loss: 0.988454
+Epoch 133/500 | Loss: 1.003633
+Epoch 134/500 | Loss: 1.003535
+Epoch 135/500 | Loss: 0.989288
+Epoch 136/500 | Loss: 1.001281
+Epoch 137/500 | Loss: 0.997796
+Epoch 138/500 | Loss: 0.990139
+Epoch 139/500 | Loss: 0.985243
+Epoch 140/500 | Loss: 1.005132
+Epoch 141/500 | Loss: 0.986121
+Epoch 142/500 | Loss: 0.993191
+Epoch 143/500 | Loss: 0.983429
+Epoch 144/500 | Loss: 1.009285
+Epoch 145/500 | Loss: 0.996062
+Epoch 146/500 | Loss: 0.986044
+Epoch 147/500 | Loss: 1.000120
+Epoch 148/500 | Loss: 0.992611
+Epoch 149/500 | Loss: 1.003160
+Epoch 150/500 | Loss: 0.983455
+Epoch 151/500 | Loss: 0.999645
+Epoch 152/500 | Loss: 1.004741
+Epoch 153/500 | Loss: 1.001626
+Epoch 154/500 | Loss: 0.992645
+Epoch 155/500 | Loss: 0.998843
+Epoch 156/500 | Loss: 1.000798
+Epoch 157/500 | Loss: 1.016813
+Epoch 158/500 | Loss: 0.984158
+Epoch 159/500 | Loss: 0.996283
+Epoch 160/500 | Loss: 0.997124
+Epoch 161/500 | Loss: 1.014394
+Epoch 162/500 | Loss: 1.000770
+Epoch 163/500 | Loss: 0.991285
+Epoch 164/500 | Loss: 0.979904
+Epoch 165/500 | Loss: 0.992993
+Epoch 166/500 | Loss: 0.993654
+Epoch 167/500 | Loss: 0.988623
+Epoch 168/500 | Loss: 1.012441
+Epoch 169/500 | Loss: 1.003534
+Epoch 170/500 | Loss: 1.003030
+Epoch 171/500 | Loss: 0.996248
+Epoch 172/500 | Loss: 0.988079
+Epoch 173/500 | Loss: 0.982114
+Epoch 174/500 | Loss: 0.986355
+Epoch 175/500 | Loss: 1.019584
+Epoch 176/500 | Loss: 1.014744
+Epoch 177/500 | Loss: 1.027057
+Epoch 178/500 | Loss: 0.992712
+Epoch 179/500 | Loss: 1.013211
+Epoch 180/500 | Loss: 1.028306
+Epoch 181/500 | Loss: 1.004473
+Epoch 182/500 | Loss: 0.988884
+Epoch 183/500 | Loss: 1.013563
+Epoch 184/500 | Loss: 1.012811
+Epoch 185/500 | Loss: 0.990553
+Epoch 186/500 | Loss: 1.008691
+Epoch 187/500 | Loss: 0.987791
+Epoch 188/500 | Loss: 0.981342
+Epoch 189/500 | Loss: 0.984295
+Epoch 190/500 | Loss: 1.024263
+Epoch 191/500 | Loss: 0.996081
+Epoch 192/500 | Loss: 1.009311
+Epoch 193/500 | Loss: 0.994284
+Epoch 194/500 | Loss: 0.999576
+Epoch 195/500 | Loss: 1.005037
+Epoch 196/500 | Loss: 1.005159
+Epoch 197/500 | Loss: 1.006816
+Epoch 198/500 | Loss: 0.998374
+Epoch 199/500 | Loss: 1.002110
+Epoch 200/500 | Loss: 0.995566
+Epoch 201/500 | Loss: 1.006740
+Epoch 202/500 | Loss: 1.012524
+Epoch 203/500 | Loss: 1.015849
+Epoch 204/500 | Loss: 0.991991
+Epoch 205/500 | Loss: 0.992987
+Epoch 206/500 | Loss: 0.993347
+Epoch 207/500 | Loss: 1.005851
+Epoch 208/500 | Loss: 1.010682
+Epoch 209/500 | Loss: 1.000351
+Epoch 210/500 | Loss: 1.004712
+Epoch 211/500 | Loss: 1.004305
+Epoch 212/500 | Loss: 0.999588
+Epoch 213/500 | Loss: 0.993856
+Epoch 214/500 | Loss: 1.006017
+Epoch 215/500 | Loss: 0.992660
+Epoch 216/500 | Loss: 1.004298
+Epoch 217/500 | Loss: 0.994576
+Epoch 218/500 | Loss: 1.012399
+Epoch 219/500 | Loss: 0.997526
+Epoch 220/500 | Loss: 0.992936
+Epoch 221/500 | Loss: 0.989899
+Epoch 222/500 | Loss: 0.997583
+Epoch 223/500 | Loss: 1.011908
+Epoch 224/500 | Loss: 1.005379
+Epoch 225/500 | Loss: 0.995702
+Epoch 226/500 | Loss: 0.994829
+Epoch 227/500 | Loss: 0.999010
+Epoch 228/500 | Loss: 0.985756
+Epoch 229/500 | Loss: 1.002362
+Epoch 230/500 | Loss: 1.005163
+Epoch 231/500 | Loss: 0.997939
+Epoch 232/500 | Loss: 0.992379
+Epoch 233/500 | Loss: 0.998276
+Epoch 234/500 | Loss: 0.998844
+Epoch 235/500 | Loss: 0.994477
+Epoch 236/500 | Loss: 0.999018
+Epoch 237/500 | Loss: 0.991138
+Epoch 238/500 | Loss: 1.008069
+Epoch 239/500 | Loss: 0.999047
+Epoch 240/500 | Loss: 0.999248
+Epoch 241/500 | Loss: 0.996201
+Epoch 242/500 | Loss: 0.977201
+Epoch 243/500 | Loss: 1.006169
+Epoch 244/500 | Loss: 1.007354
+Epoch 245/500 | Loss: 1.003842
+Epoch 246/500 | Loss: 1.002885
+Epoch 247/500 | Loss: 1.002881
+Epoch 248/500 | Loss: 1.005963
+Epoch 249/500 | Loss: 0.988949
+Epoch 250/500 | Loss: 0.991939
+Epoch 251/500 | Loss: 0.992086
+Epoch 252/500 | Loss: 1.009908
+Epoch 253/500 | Loss: 0.976698
+Epoch 254/500 | Loss: 1.004659
+Epoch 255/500 | Loss: 0.981958
+Epoch 256/500 | Loss: 0.999148
+Epoch 257/500 | Loss: 0.986735
+Epoch 258/500 | Loss: 0.981301
+Epoch 259/500 | Loss: 0.999335
+Epoch 260/500 | Loss: 0.990244
+Epoch 261/500 | Loss: 0.999946
+Epoch 262/500 | Loss: 0.996778
+Epoch 263/500 | Loss: 1.000215
+Epoch 264/500 | Loss: 0.990656
+Epoch 265/500 | Loss: 0.997375
+Epoch 266/500 | Loss: 0.994179
+Epoch 267/500 | Loss: 0.995804
+Epoch 268/500 | Loss: 0.990961
+Epoch 269/500 | Loss: 1.002784
+Epoch 270/500 | Loss: 0.985480
+Epoch 271/500 | Loss: 0.994628
+Epoch 272/500 | Loss: 0.985455
+Epoch 273/500 | Loss: 1.006575
+Epoch 274/500 | Loss: 0.985064
+Epoch 275/500 | Loss: 0.999974
+Epoch 276/500 | Loss: 0.975080
+Epoch 277/500 | Loss: 1.001682
+Epoch 278/500 | Loss: 1.015757
+Epoch 279/500 | Loss: 1.005432
+Epoch 280/500 | Loss: 1.004979
+Epoch 281/500 | Loss: 1.007116
+Epoch 282/500 | Loss: 0.992863
+Epoch 283/500 | Loss: 1.002244
+Epoch 284/500 | Loss: 0.992358
+Epoch 285/500 | Loss: 0.996710
+Epoch 286/500 | Loss: 0.996775
+Epoch 287/500 | Loss: 0.982421
+Epoch 288/500 | Loss: 0.975683
+Epoch 289/500 | Loss: 0.996244
+Epoch 290/500 | Loss: 0.992657
+Epoch 291/500 | Loss: 0.993544
+Epoch 292/500 | Loss: 0.988987
+Epoch 293/500 | Loss: 0.984729
+Epoch 294/500 | Loss: 0.982417
+Epoch 295/500 | Loss: 0.998493
+Epoch 296/500 | Loss: 1.008038
+Epoch 297/500 | Loss: 0.990926
+Epoch 298/500 | Loss: 0.988739
+Epoch 299/500 | Loss: 0.992853
+Epoch 300/500 | Loss: 0.994244
+Epoch 301/500 | Loss: 1.004946
+Epoch 302/500 | Loss: 1.006971
+Epoch 303/500 | Loss: 1.006629
+Epoch 304/500 | Loss: 0.979234
+Epoch 305/500 | Loss: 0.997467
+Epoch 306/500 | Loss: 0.993287
+Epoch 307/500 | Loss: 0.984275
+Epoch 308/500 | Loss: 0.989282
+Epoch 309/500 | Loss: 0.981542
+Epoch 310/500 | Loss: 0.994728
+Epoch 311/500 | Loss: 0.989689
+Epoch 312/500 | Loss: 0.980167
+Epoch 313/500 | Loss: 1.010363
+Epoch 314/500 | Loss: 0.986537
+Epoch 315/500 | Loss: 1.000383
+Epoch 316/500 | Loss: 1.014804
+Epoch 317/500 | Loss: 0.981572
+Epoch 318/500 | Loss: 0.984357
+Epoch 319/500 | Loss: 0.975966
+Epoch 320/500 | Loss: 0.989846
+Epoch 321/500 | Loss: 0.982540
+Epoch 322/500 | Loss: 1.004538
+Epoch 323/500 | Loss: 1.004784
+Epoch 324/500 | Loss: 0.991725
+Epoch 325/500 | Loss: 0.971111
+Epoch 326/500 | Loss: 0.994739
+Epoch 327/500 | Loss: 0.987298
+Epoch 328/500 | Loss: 0.988652
+Epoch 329/500 | Loss: 1.000263
+Epoch 330/500 | Loss: 0.965551
+Epoch 331/500 | Loss: 0.973861
+Epoch 332/500 | Loss: 0.996224
+Epoch 333/500 | Loss: 0.967084
+Epoch 334/500 | Loss: 1.002076
+Epoch 335/500 | Loss: 0.981744
+Epoch 336/500 | Loss: 0.985946
+Epoch 337/500 | Loss: 0.987107
+Epoch 338/500 | Loss: 0.969136
+Epoch 339/500 | Loss: 0.990256
+Epoch 340/500 | Loss: 0.973891
+Epoch 341/500 | Loss: 0.983604
+Epoch 342/500 | Loss: 0.974434
+Epoch 343/500 | Loss: 0.986360
+Epoch 344/500 | Loss: 0.970719
+Epoch 345/500 | Loss: 0.975447
+Epoch 346/500 | Loss: 0.984404
+Epoch 347/500 | Loss: 0.984122
+Epoch 348/500 | Loss: 0.990029
+Epoch 349/500 | Loss: 1.005824
+Epoch 350/500 | Loss: 0.958822
+Epoch 351/500 | Loss: 0.949427
+Epoch 352/500 | Loss: 0.964570
+Epoch 353/500 | Loss: 0.947877
+Epoch 354/500 | Loss: 0.977272
+Epoch 355/500 | Loss: 0.993051
+Epoch 356/500 | Loss: 1.005071
+Epoch 357/500 | Loss: 0.972062
+Epoch 358/500 | Loss: 0.936376
+Epoch 359/500 | Loss: 0.982228
+Epoch 360/500 | Loss: 0.960551
+Epoch 361/500 | Loss: 0.931462
+Epoch 362/500 | Loss: 0.974223
+Epoch 363/500 | Loss: 0.966189
+Epoch 364/500 | Loss: 0.984316
+Epoch 365/500 | Loss: 0.966428
+Epoch 366/500 | Loss: 1.020663
+Epoch 367/500 | Loss: 0.970310
+Epoch 368/500 | Loss: 0.997284
+Epoch 369/500 | Loss: 0.960389
+Epoch 370/500 | Loss: 0.988714
+Epoch 371/500 | Loss: 0.926205
+Epoch 372/500 | Loss: 0.986809
+Epoch 373/500 | Loss: 0.963203
+Epoch 374/500 | Loss: 0.985959
+Epoch 375/500 | Loss: 0.960573
+Epoch 376/500 | Loss: 0.928985
+Epoch 377/500 | Loss: 0.965747
+Epoch 378/500 | Loss: 0.976672
+Epoch 379/500 | Loss: 0.947754
+Epoch 380/500 | Loss: 0.963244
+Epoch 381/500 | Loss: 0.939665
+Epoch 382/500 | Loss: 0.978390
+Epoch 383/500 | Loss: 0.946280
+Epoch 384/500 | Loss: 0.971296
+Epoch 385/500 | Loss: 0.972565
+Epoch 386/500 | Loss: 0.932021
+Epoch 387/500 | Loss: 0.977239
+Epoch 388/500 | Loss: 0.939045
+Epoch 389/500 | Loss: 0.971698
+Epoch 390/500 | Loss: 0.936792
+Epoch 391/500 | Loss: 0.952995
+Epoch 392/500 | Loss: 0.898591
+Epoch 393/500 | Loss: 0.909171
+Epoch 394/500 | Loss: 0.930388
+Epoch 395/500 | Loss: 0.942127
+Epoch 396/500 | Loss: 0.934988
+Epoch 397/500 | Loss: 0.921979
+Epoch 398/500 | Loss: 0.974172
+Epoch 399/500 | Loss: 0.937083
+Epoch 400/500 | Loss: 0.958501
+Epoch 401/500 | Loss: 0.940451
+Epoch 402/500 | Loss: 0.917706
+Epoch 403/500 | Loss: 0.886344
+Epoch 404/500 | Loss: 0.836307
+Epoch 405/500 | Loss: 0.956513
+Epoch 406/500 | Loss: 0.958065
+Epoch 407/500 | Loss: 0.878850
+Epoch 408/500 | Loss: 0.946488
+Epoch 409/500 | Loss: 0.933993
+Epoch 410/500 | Loss: 0.927995
+Epoch 411/500 | Loss: 0.882766
+Epoch 412/500 | Loss: 0.875451
+Epoch 413/500 | Loss: 0.933170
+Epoch 414/500 | Loss: 0.903026
+Epoch 415/500 | Loss: 0.924734
+Epoch 416/500 | Loss: 0.935575
+Epoch 417/500 | Loss: 0.930017
+Epoch 418/500 | Loss: 0.929473
+Epoch 419/500 | Loss: 0.921658
+Epoch 420/500 | Loss: 0.916818
+Epoch 421/500 | Loss: 0.911043
+Epoch 422/500 | Loss: 0.959567
+Epoch 423/500 | Loss: 0.905087
+Epoch 424/500 | Loss: 0.886754
+Epoch 425/500 | Loss: 0.927896
+Epoch 426/500 | Loss: 0.888488
+Epoch 427/500 | Loss: 0.880054
+Epoch 428/500 | Loss: 0.908532
+Epoch 429/500 | Loss: 0.866170
+Epoch 430/500 | Loss: 0.853750
+Epoch 431/500 | Loss: 0.897765
+Epoch 432/500 | Loss: 0.883365
+Epoch 433/500 | Loss: 0.912512
+Epoch 434/500 | Loss: 0.889456
+Epoch 435/500 | Loss: 0.909848
+Epoch 436/500 | Loss: 0.913599
+Epoch 437/500 | Loss: 0.902686
+Epoch 438/500 | Loss: 0.988692
+Epoch 439/500 | Loss: 0.888514
+Epoch 440/500 | Loss: 1.052727
+Epoch 441/500 | Loss: 0.914616
+Epoch 442/500 | Loss: 0.916960
+Epoch 443/500 | Loss: 0.858296
+Epoch 444/500 | Loss: 0.862286
+Epoch 445/500 | Loss: 0.957868
+Epoch 446/500 | Loss: 0.906882
+Epoch 447/500 | Loss: 0.872684
+Epoch 448/500 | Loss: 0.901011
+Epoch 449/500 | Loss: 0.848168
+Epoch 450/500 | Loss: 0.881613
+Epoch 451/500 | Loss: 0.835900
+Epoch 452/500 | Loss: 0.864690
+Epoch 453/500 | Loss: 0.903176
+Epoch 454/500 | Loss: 0.797900
+Epoch 455/500 | Loss: 0.895290
+Epoch 456/500 | Loss: 0.845594
+Epoch 457/500 | Loss: 0.833782
+Epoch 458/500 | Loss: 0.810107
+Epoch 459/500 | Loss: 0.899199
+Epoch 460/500 | Loss: 0.851173
+Epoch 461/500 | Loss: 0.874337
+Epoch 462/500 | Loss: 0.850205
+Epoch 463/500 | Loss: 0.811082
+Epoch 464/500 | Loss: 0.803404
+Epoch 465/500 | Loss: 0.930716
+Epoch 466/500 | Loss: 0.914819
+Epoch 467/500 | Loss: 0.872763
+Epoch 468/500 | Loss: 0.837764
+Epoch 469/500 | Loss: 0.932401
+Epoch 470/500 | Loss: 0.803236
+Epoch 471/500 | Loss: 0.916954
+Epoch 472/500 | Loss: 0.736735
+Epoch 473/500 | Loss: 0.792412
+Epoch 474/500 | Loss: 0.872715
+Epoch 475/500 | Loss: 0.819438
+Epoch 476/500 | Loss: 0.758778
+Epoch 477/500 | Loss: 0.822774
+Epoch 478/500 | Loss: 0.912380
+Epoch 479/500 | Loss: 0.713591
+Epoch 480/500 | Loss: 0.930303
+Epoch 481/500 | Loss: 0.746459
+Epoch 482/500 | Loss: 0.764064
+Epoch 483/500 | Loss: 0.746644
+Epoch 484/500 | Loss: 0.759945
+Epoch 485/500 | Loss: 0.746128
+Epoch 486/500 | Loss: 0.750331
+Epoch 487/500 | Loss: 0.806864
+Epoch 488/500 | Loss: 0.825286
+Epoch 489/500 | Loss: 0.891738
+Epoch 490/500 | Loss: 0.970092
+Epoch 491/500 | Loss: 0.803685
+Epoch 492/500 | Loss: 0.956676
+Epoch 493/500 | Loss: 0.779949
+Epoch 494/500 | Loss: 0.810360
+Epoch 495/500 | Loss: 0.728698
+Epoch 496/500 | Loss: 0.846558
+Epoch 497/500 | Loss: 0.825370
+Epoch 498/500 | Loss: 0.785175
+Epoch 499/500 | Loss: 0.793778
+Epoch 500/500 | Loss: 0.851589
+Training MAE: 0.2181
+Test MAE: 0.1953
+
+==============================
+Start creating IG figures...
+==============================
+find 9 samples and start analysing...
+[1/9] analysing ID: 37 ...IG integral (50 steps)...
+DEBUG: IG successfully calculated, and the max score (initial): 0.023563
+Generating clear, large importance map for: 37...
+/home/ucaqzti/deepchem/dc_gnnv4_ig_onlygraph.py:143: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = cm.get_cmap('Reds') # red color series
+Final clear importance map saved to: /home/ucaqzti/deepchem/test_set_ig_maps/atom_ig_37.png
+[2/9] analysing ID: 11 ...IG integral (50 steps)...
+DEBUG: IG successfully calculated, and the max score (initial): 0.034714
+Generating clear, large importance map for: 11...
+/home/ucaqzti/deepchem/dc_gnnv4_ig_onlygraph.py:143: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = cm.get_cmap('Reds') # red color series
+Final clear importance map saved to: /home/ucaqzti/deepchem/test_set_ig_maps/atom_ig_11.png
+[3/9] analysing ID: 24 ...IG integral (50 steps)...
+DEBUG: IG successfully calculated, and the max score (initial): 0.035959
+Generating clear, large importance map for: 24...
+/home/ucaqzti/deepchem/dc_gnnv4_ig_onlygraph.py:143: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = cm.get_cmap('Reds') # red color series
+Final clear importance map saved to: /home/ucaqzti/deepchem/test_set_ig_maps/atom_ig_24.png
+[4/9] analysing ID: 19 ...IG integral (50 steps)...
+DEBUG: IG successfully calculated, and the max score (initial): 0.031873
+Generating clear, large importance map for: 19...
+/home/ucaqzti/deepchem/dc_gnnv4_ig_onlygraph.py:143: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = cm.get_cmap('Reds') # red color series
+Final clear importance map saved to: /home/ucaqzti/deepchem/test_set_ig_maps/atom_ig_19.png
+[5/9] analysing ID: 21 ...IG integral (50 steps)...
+DEBUG: IG successfully calculated, and the max score (initial): 0.087753
+Generating clear, large importance map for: 21...
+/home/ucaqzti/deepchem/dc_gnnv4_ig_onlygraph.py:143: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = cm.get_cmap('Reds') # red color series
+Final clear importance map saved to: /home/ucaqzti/deepchem/test_set_ig_maps/atom_ig_21.png
+[6/9] analysing ID: 8 ...IG integral (50 steps)...
+DEBUG: IG successfully calculated, and the max score (initial): 0.048187
+Generating clear, large importance map for: 8...
+/home/ucaqzti/deepchem/dc_gnnv4_ig_onlygraph.py:143: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = cm.get_cmap('Reds') # red color series
+Final clear importance map saved to: /home/ucaqzti/deepchem/test_set_ig_maps/atom_ig_8.png
+[7/9] analysing ID: 15 ...IG integral (50 steps)...
+DEBUG: IG successfully calculated, and the max score (initial): 0.031827
+Generating clear, large importance map for: 15...
+/home/ucaqzti/deepchem/dc_gnnv4_ig_onlygraph.py:143: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = cm.get_cmap('Reds') # red color series
+Final clear importance map saved to: /home/ucaqzti/deepchem/test_set_ig_maps/atom_ig_15.png
+[8/9] analysing ID: 30 ...IG integral (50 steps)...
+DEBUG: IG successfully calculated, and the max score (initial): 0.053021
+Generating clear, large importance map for: 30...
+/home/ucaqzti/deepchem/dc_gnnv4_ig_onlygraph.py:143: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = cm.get_cmap('Reds') # red color series
+Final clear importance map saved to: /home/ucaqzti/deepchem/test_set_ig_maps/atom_ig_30.png
+[9/9] analysing ID: 40 ...IG integral (50 steps)...
+DEBUG: IG successfully calculated, and the max score (initial): 0.064545
+Generating clear, large importance map for: 40...
+/home/ucaqzti/deepchem/dc_gnnv4_ig_onlygraph.py:143: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = cm.get_cmap('Reds') # red color series
+Final clear importance map saved to: /home/ucaqzti/deepchem/test_set_ig_maps/atom_ig_40.png
+
+==============================
+IG images done
+Create 9/9 figures successfully
+The images were saved in: /home/ucaqzti/deepchem/test_set_ig_maps
+==============================
+
+Starting Bootstrap Uncertainty Analysis (10 iterations)...
+Bootstrap Iteration 1/10
+Bootstrap Iteration 2/10
+Bootstrap Iteration 3/10
+Bootstrap Iteration 4/10
+Bootstrap Iteration 5/10
+Bootstrap Iteration 6/10
+Bootstrap Iteration 7/10
+Bootstrap Iteration 8/10
+Bootstrap Iteration 9/10
+Bootstrap Iteration 10/10
