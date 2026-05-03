@@ -407,9 +407,48 @@ print(f"data have been saved in: {dataset_cache_dir}")
 
 # 3. data splitting and preparation ---
 print(f"valid data: {len(dataset)}")
-splitter = dc.splits.RandomSplitter()
-train_dataset, test_dataset = splitter.train_test_split(dataset, frac_train=0.8, seed=42)
 
+# Dataset splitting based on the File ID (mm-nn, with mm as the structure identifier)
+# 1. extract the mm from the File ID and get the unique mm list
+all_fids = dataset.ids
+all_mm = [str(fid).split('-')[0] for fid in all_fids]
+unique_mm = sorted(list(set(all_mm)))
+
+# 2. split the unique mm into train and test lists (80% train, 20% test)
+import random
+random.seed(42)
+random.shuffle(unique_mm)
+
+split_idx = int(0.8 * len(unique_mm))
+train_mm_list = unique_mm[:split_idx]
+test_mm_list = unique_mm[split_idx:]
+
+# 3. according to the mm lists, find the corresponding indices in the dataset
+train_indices = [i for i, mm in enumerate(all_mm) if mm in train_mm_list]
+test_indices = [i for i, mm in enumerate(all_mm) if mm in test_mm_list]
+
+# 4. use the indices to split the dataset
+splitter = dc.splits.IndexSplitter()
+train_dataset = dataset.select(train_indices)
+test_dataset = dataset.select(test_indices)
+
+# --- confirm the data splitting ---
+train_mm_check = set([str(fid).split('-')[0] for fid in train_dataset.ids])
+test_mm_check = set([str(fid).split('-')[0] for fid in test_dataset.ids])
+mm_overlap = train_mm_check.intersection(test_mm_check)
+
+print("\n" + "="*30)
+print(f"Manual Group Split Summary:")
+print(f"Total mm structures: {len(unique_mm)}")
+print(f"Training structures: {len(train_mm_check)}")
+print(f"Test structures: {len(test_mm_check)}")
+
+if len(mm_overlap) > 0:
+    print(f"ERROR: Group leakage! Overlap: {mm_overlap}")
+else:
+    print("Success: No structure overlap (mm).")
+print("="*30 + "\n")
+# ------------------
 transformers = [
     dc.trans.NormalizationTransformer(transform_y=True, dataset=train_dataset)
 ]
