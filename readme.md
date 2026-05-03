@@ -67,3 +67,4 @@ pip install -r dcgnn_requirement.txt
 ```
 ### Running the code
 For each subfolder in the `dc_gnn` folder, there is a corresponding code for running the GNN model with different input features. For example, to run the GNN model with graph+T,P features, you can run the `dc_gnn_graph_tp.py` file. The input data for the GNN model is prepared in the `data_prepare` folder, and the results will be saved in the same folder after running the code. You can find the results in the `*.png` files after running the code.
+And htere is a folder named "importance_3d", which includes the 3D importance map of the input graph for the GNN model.
