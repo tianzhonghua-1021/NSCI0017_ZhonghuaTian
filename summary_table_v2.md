@@ -29,7 +29,7 @@
 ### 2.2 Summary table
 | Model | graph+T,P+TDA | graph+T,P | graph+TDA | only graph (44*) | only graph (1500*) |  only T,P (MLP) | only TDA (MLP) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Deepchem GNN | 0.907 | 0.880 | 0.815 | 0.233 | 0.850 | 0.131 | 0.539 |
+| Deepchem GNN | 0.907 | 0.880 | 0.815 | 0.233 | 0.391 | 0.131 | 0.539 |
 
 *44: the 44 original SWCNT structures with H2
 *1500 the augmented 1500 structures with perturbation on the the position of H2
