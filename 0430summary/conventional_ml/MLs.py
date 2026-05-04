@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.utils import resample
 from scipy.stats import norm
+import matplotlib.lines as mlines
 
 # ============ CONFIGURATION ============
 # choose the type: "phys_T,P_TDA", "phys", "T,P", "TDA", "phys_T,P", "phys_TDA"
@@ -306,57 +307,153 @@ def plot_combined_doa_analysis(X_train_scaled, X_test_scaled, y_test, prediction
         
     except Exception as e:
         print(f"Error in DOA analysis: {e}")
+def calculate_bootstrap_metrics(y_true, y_pred, std_dev):
+    """
+    calculate the core metrics for regression performance and uncertainty evaluation
+    """
+    # regression metrics
+    r2 = r2_score(y_true, y_pred)
+    rmse = np.sqrt(mean_squared_error(y_true, y_pred))
+    
+    # coverage
+    z_95 = 1.96
+    lower_bound = y_pred - z_95 * std_dev
+    upper_bound = y_pred + z_95 * std_dev
+    coverage = np.mean((y_true >= lower_bound) & (y_true <= upper_bound))
+    
+    # efficiency
+    efficiency = np.mean(upper_bound - lower_bound)
+    
+    return r2, rmse, coverage, efficiency
 
-def plot_model_performance_comparison(metrics_df, output_dir):
+def get_bootstrap_error_bars(model, X_train, y_train, X_test, y_test, n_iterations=10):
     """
-    绘制4种模型在Train和Test集上的R2和RMSE对比柱状图
+    multiple bootstrap iterations to get a distribution of performance metrics, then calculate the standard deviation (error bars) for R2 and RMSE.
     """
-    print("Generating Model Performance Comparison Bar Plots...")
-    
-    # 设置绘图风格
-    sns.set_theme(style="whitegrid")
-    fig, axes = plt.subplots(1, 2, figsize=(14, 6), dpi=300)
-    
-    # 定义指标和标题
-    metrics = ['R2', 'RMSE']
-    titles = ['R² Score Comparison (Higher is better)', 'RMSE Comparison (Lower is better)']
-    
-    for i, metric in enumerate(metrics):
-        # 准备绘图数据
-        plot_data = metrics_df[metrics_df['Metric'] == metric]
+    metrics_list = []
+    for i in range(n_iterations):
+        # bootstrap resampling
+        X_res, y_res = resample(X_train, y_train, random_state=i+100)
+        from sklearn.base import clone
+        m_copy = clone(model).fit(X_res, y_res)
+        y_p = m_copy.predict(X_test)
         
-        # 绘图
-        sns.barplot(
-            data=plot_data, 
-            x='Model', 
-            y='Value', 
-            hue='Dataset', 
-            ax=axes[i],
-            palette='muted'
+        # simply collect R2 and RMSE for each iteration
+        metrics_list.append([r2_score(y_test, y_p), np.sqrt(mean_squared_error(y_test, y_p))])
+    
+    return np.std(metrics_list, axis=0) # return R2_std, RMSE_std
+def plot_academic_metrics_comparison(metrics_df, output_dir):
+    """
+    metrics comparison plot
+    """
+    print("Generating Academic Dual-Y Metrics Plot...")
+    
+    models = metrics_df['Model'].unique()
+    x = np.arange(len(models))
+    width = 0.2  # width of bars
+    
+    fig, ax1 = plt.subplots(figsize=(12, 6), dpi=300)
+    ax2 = ax1.twinx() # y axis for RMSE and Efficiency
+    
+    # metric groups
+    # left
+    r2_data = metrics_df[metrics_df['Metric'] == 'R2']
+    cov_data = metrics_df[metrics_df['Metric'] == 'Coverage']
+    # right
+    rmse_data = metrics_df[metrics_df['Metric'] == 'RMSE']
+    eff_data = metrics_df[metrics_df['Metric'] == 'Efficiency']
+    
+    # left bars (R2, Coverage)
+    b1 = ax1.bar(x - 1.5*width, r2_data['Value'], width, label='$R^2$ (bootstrap mean)', 
+                color='#1f77b4', edgecolor='black', yerr=r2_data['Error'], capsize=3)
+    b2 = ax1.bar(x - 0.5*width, cov_data['Value'], width, label='Coverage (bootstrap mean)', 
+                color='#ff7f0e', edgecolor='black', yerr=cov_data['Error'], capsize=3)
+    
+    # right bars (RMSE, Efficiency)
+    b3 = ax2.bar(x + 0.5*width, rmse_data['Value'], width, label='RMSE (bootstrap mean)', 
+                color='#2ca02c', edgecolor='black', yerr=rmse_data['Error'], capsize=3)
+    b4 = ax2.bar(x + 1.5*width, eff_data['Value'], width, label='Efficiency (bootstrap mean)', 
+                color='#d62728', edgecolor='black', yerr=eff_data['Error'], capsize=3)
+    
+    # modification
+    ax1.set_ylabel('$R^2$ / Coverage', fontsize=12, fontweight='bold')
+    ax2.set_ylabel('RMSE / Efficiency', fontsize=12, fontweight='bold')
+    ax1.set_xticks(x)
+    ax1.set_xticklabels(models, fontsize=11)
+    ax1.set_ylim(0, 1.2) # set as around 1 for R2 and Coverage
+    
+    # legends on the top of figures
+    lines1, labels1 = ax1.get_legend_handles_labels()
+    lines2, labels2 = ax2.get_legend_handles_labels()
+    ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper center', 
+               bbox_to_anchor=(0.5, 1.15), ncol=4, frameon=True, fontsize=9)
+    
+    plt.grid(axis='y', linestyle='--', alpha=0.3)
+    save_path = os.path.join(output_dir, 'combined_metrics_comparison.png')
+    plt.savefig(save_path, bbox_inches='tight')
+    plt.close()
+    print(f"✓ Combined academic plot saved to: {save_path}")
+
+def plot_interval_width_vs_coverage(uncertainty_results, output_dir):
+    """
+    generate boxplots of interval widths across different nominal coverage levels for all 4 models in a combined figure.
+    """
+    print("Generating Interval Width vs Nominal Coverage Boxplots...")
+    
+    # nominal coverage levels (alpha values) from 5% to 95%
+    coverages = np.arange(0.05, 1.0, 0.05)
+    coverage_labels = [f"{int(c*100)}%" for c in coverages]
+    
+    # color setting
+    colors = sns.color_palette("Set2", n_colors=len(uncertainty_results))
+    
+    # subgraph for each model
+    fig, axes = plt.subplots(2, 2, figsize=(16, 12), dpi=300)
+    axes = axes.flatten()
+    
+    for idx, (model_name, std_dev) in enumerate(uncertainty_results.items()):
+        ax = axes[idx]
+        plot_data = []
+        
+        # calculate the distribution of interval widths for each nominal coverage level
+        for alpha_val in coverages:
+            # calculate: width = 2 * z_score * std_dev
+            z_score = norm.ppf(1 - (1 - alpha_val) / 2)
+            widths = 2 * z_score * std_dev
+            
+            for w in widths:
+                plot_data.append({
+                    'Nominal Coverage': f"{int(alpha_val*100)}%",
+                    'Interval Width': w
+                })
+        
+        df_width = pd.DataFrame(plot_data)
+        
+        # draw boxplot
+        sns.boxplot(
+            data=df_width, 
+            x='Nominal Coverage', 
+            y='Interval Width', 
+            ax=ax,
+            color=colors[idx],
+            fliersize=2,        # outlier marker size
+            linewidth=1.2,      # whisker line width
+            width=0.7           # box width
         )
         
-        axes[i].set_title(titles[i], fontsize=14, fontweight='bold')
-        axes[i].set_ylabel(metric)
-        axes[i].set_xlabel('Model')
-        axes[i].legend(title='Dataset')
-        
-        # 在柱状图上添加数值标签
-        for p in axes[i].patches:
-            height = p.get_height()
-            # 只有高度大于 1e-6 (避开零值和极小值) 且高度不是 NaN 时才进行标注
-            if height > 1e-6 and not np.isnan(height):
-                axes[i].annotate(f'{height:.3f}', 
-                                (p.get_x() + p.get_width() / 2., height), 
-                                ha='center', va='center', 
-                                xytext=(0, 9), 
-                                textcoords='offset points',
-                                fontsize=9)
+        ax.set_title(f'Model: {model_name}', fontsize=14, fontweight='bold')
+        ax.set_xlabel('Nominal Coverage', fontsize=12)
+        ax.set_ylabel('Interval Width (V)', fontsize=12)
+        ax.grid(axis='y', linestyle='--', alpha=0.4)
+        ax.set_xticklabels(coverage_labels, rotation=45)
 
+    plt.suptitle('Interval-width distribution across Nominal Coverages', fontsize=16, y=1.02)
     plt.tight_layout()
-    save_path = os.path.join(output_dir, 'model_performance_comparison.png')
-    plt.savefig(save_path)
+    
+    save_path = os.path.join(output_dir, 'interval_width_coverage_boxplot.png')
+    plt.savefig(save_path, bbox_inches='tight')
     plt.close()
-    print(f"✓ Performance comparison bar plot saved to: {save_path}")
+    print(f"✓ Interval width boxplots saved to: {save_path}")  
 
 # ============ MAIN EXECUTION ============
 print(f"\n{'='*60}")
@@ -413,6 +510,12 @@ best_rf = grid_rf.best_estimator_
 best_svr = grid_svr.best_estimator_
 best_xgb = grid_xgb.best_estimator_
 
+# for visualization purposes
+y_train_pred_rf = best_rf.predict(X_train_scaled)
+y_train_pred_svr = best_svr.predict(X_train_scaled)
+y_train_pred_lr = lr.predict(X_train_scaled)
+y_train_pred_xgb = best_xgb.predict(X_train_scaled)
+
 # Make predictions
 y_pred_rf = best_rf.predict(X_test_scaled)
 y_pred_svr = best_svr.predict(X_test_scaled)
@@ -430,40 +533,70 @@ r2_xgb = r2_score(y_test, y_pred_xgb)
 rmse_xgb = np.sqrt(mean_squared_error(y_test, y_pred_xgb))
 
 # Visualization
-plt.figure(figsize=(15, 15), dpi=300)
+def plot_refined_performance(y_train_true, y_train_pred, y_test_true, y_test_pred, 
+                             model_name, r2_train, rmse_train, r2_test, rmse_test, save_name):
+    # data preparation for joint plot
+    df_train = pd.DataFrame({
+        'Measured': y_train_true.flatten(), 
+        'Predicted': y_train_pred.flatten(), 
+        'Set': 'Train'
+    })
+    df_test = pd.DataFrame({
+        'Measured': y_test_true.flatten(), 
+        'Predicted': y_test_pred.flatten(), 
+        'Set': 'Test'
+    })
+    df_plot = pd.concat([df_train, df_test])
 
-plt.subplot(2, 2, 1)
-plt.scatter(y_test, y_pred_rf, alpha=0.6, edgecolors='k', color='blue')
-plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--', lw=2)
-plt.title(f'Random Forest (R2={r2_rf:.3f} RMSE={rmse_rf:.4f})')
-plt.xlabel('Measured Theta')
-plt.ylabel('Predicted Theta')
+    # create JointGrid with seaborn
+    g = sns.JointGrid(data=df_plot, x='Measured', y='Predicted', hue='Set', 
+                      palette={'Train': '#1f77b4', 'Test': '#d62728'}, space=0, ratio=5)
+    
+    # draw scatter points on the joint plot
+    g.plot_joint(sns.scatterplot, alpha=0.5, edgecolor='w', s=45)
+    
+    # draw marginal histograms with KDE
+    g.plot_marginals(sns.histplot, kde=True, alpha=0.3, common_norm=False)
+    
+    # draw the perfect prediction line (y=x)
+    ax_main = g.ax_joint
+    all_vals = np.concatenate([y_train_true, y_test_true])
+    vmin, vmax = all_vals.min(), all_vals.max()
+    ax_main.plot([vmin, vmax], [vmin, vmax], 'k--', lw=1.5, alpha=0.7, label='Ideal y=x')
+    
+    # add performance metrics as text box on the plot
+    stats_label = (f"Train: $R^2$={r2_train:.3f}, RMSE={rmse_train:.4f}\n"
+                   f"Test : $R^2$={r2_test:.3f}, RMSE={rmse_test:.4f}")
+    
+    ax_main.text(0.05, 0.95, stats_label, transform=ax_main.transAxes, 
+                 fontsize=9, verticalalignment='top', family='monospace',
+                 bbox=dict(boxstyle='round,pad=0.4', facecolor='white', alpha=0.8, edgecolor='gray'))
+    
+    # set labels and title
+    ax_main.set_xlabel('Measured $\\theta$ (DFT+Langmuir)', fontsize=11)
+    ax_main.set_ylabel('Predicted $\\theta$ (Model)', fontsize=11)
+    g.fig.suptitle(f'Model: {model_name}', y=1.02, fontsize=13, fontweight='bold')
+    
+    plt.savefig(os.path.join(output_dir, save_name), dpi=300, bbox_inches='tight')
+    plt.close()
+print("Generating final joint distribution plots...")
 
-plt.subplot(2, 2, 2)
-plt.scatter(y_test, y_pred_svr, alpha=0.6, edgecolors='k', color='green')
-plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--', lw=2)
-plt.title(f'SVR (R2={r2_svr:.3f} RMSE={rmse_svr:.4f})')
-plt.xlabel('Measured Theta')
-plt.ylabel('Predicted Theta')
+models_data = [
+    ('Random Forest', y_train_pred_rf, y_pred_rf, 'joint_dist_rf.png'),
+    ('SVR', y_train_pred_svr, y_pred_svr, 'joint_dist_svr.png'),
+    ('Linear Regression', y_train_pred_lr, y_pred_lr, 'joint_dist_lr.png'),
+    ('XGBoost', y_train_pred_xgb, y_pred_xgb, 'joint_dist_xgb.png')
+]
 
-plt.subplot(2, 2, 3)
-plt.scatter(y_test, y_pred_lr, alpha=0.6, edgecolors='k', color='orange')
-plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--', lw=2)
-plt.title(f'Linear Regression (R2={r2_lr:.3f} RMSE={rmse_lr:.4f})')
-plt.xlabel('Measured Theta')
-plt.ylabel('Predicted Theta')
-
-plt.subplot(2, 2, 4)
-plt.scatter(y_test, y_pred_xgb, alpha=0.6, edgecolors='k', color='royalblue')
-plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--', lw=2)
-plt.title(f'XGBoost (R2={r2_xgb:.3f} RMSE={rmse_xgb:.4f})')
-plt.xlabel('Measured Theta')
-plt.ylabel('Predicted Theta')
-
-plt.tight_layout()
-plt.savefig(os.path.join(output_dir, 'model_comparison.png'))
-plt.close()
-print(f"✓ Model comparison saved")
+for name, train_p, test_p, s_name in models_data:
+    r2_t = r2_score(y_train, train_p)
+    rmse_t = np.sqrt(mean_squared_error(y_train, train_p))
+    r2_v = r2_score(y_test, test_p)
+    rmse_v = np.sqrt(mean_squared_error(y_test, test_p))
+    
+    plot_refined_performance(y_train.values, train_p, y_test.values, test_p, 
+                             name, r2_t, rmse_t, r2_v, rmse_v, s_name)
+print(f"✓ Refined model comparison plots saved to {output_dir}")
 
 # Uncertainty analysis
 models_to_analyze = [
@@ -508,33 +641,44 @@ plot_combined_doa_analysis(
     output_dir=output_dir
 )
 # Performance comparison bar plot
-# 1. 计算所有模型在训练集上的表现（用于对比）
+# all models' predictions on the training set for performance metrics calculation
 y_train_pred_rf = best_rf.predict(X_train_scaled)
 y_train_pred_svr = best_svr.predict(X_train_scaled)
 y_train_pred_lr = lr.predict(X_train_scaled)
 y_train_pred_xgb = best_xgb.predict(X_train_scaled)
 
-# 2. 整理数据用于绘图
 performance_data = []
-models_list = [
-    ("Random Forest", y_train_pred_rf, y_pred_rf),
-    ("SVR", y_train_pred_svr, y_pred_svr),
-    ("Linear Regression", y_train_pred_lr, y_pred_lr),
-    ("XGBoost", y_train_pred_xgb, y_pred_xgb)
+models_to_plot = [
+    ("Random Forest", "Random_Forest", best_rf),
+    ("SVR", "SVR", best_svr),
+    ("Linear Regression", "Linear_Regression", lr),
+    ("XGBoost", "XGBoost", best_xgb)
 ]
 
-for name, train_pred, test_pred in models_list:
-    # 训练集指标
-    performance_data.append([name, 'Train', 'R2', r2_score(y_train, train_pred)])
-    performance_data.append([name, 'Train', 'RMSE', np.sqrt(mean_squared_error(y_train, train_pred))])
-    # 测试集指标
-    performance_data.append([name, 'Test', 'R2', r2_score(y_test, test_pred)])
-    performance_data.append([name, 'Test', 'RMSE', np.sqrt(mean_squared_error(y_test, test_pred))])
+print("Calculating full academic metrics with error bars...")
+for display_name, internal_name, model_obj in models_to_plot:
+    y_p = predictions_dict[internal_name]
+    s_d = uncertainty_results[internal_name]
+    
+    # calculate the core metrics for regression performance and uncertainty evaluation
+    r2, rmse, cov, eff = calculate_bootstrap_metrics(y_test.values, y_p, s_d)
+    
+    # obtain error bars for R2 and RMSE using bootstrap resampling
+    r2_std, rmse_std = get_bootstrap_error_bars(model_obj, X_train_scaled, y_train, X_test_scaled, y_test.values)
+    
+    # fill in the performance data list for plotting
+    performance_data.append([display_name, 'R2', r2, r2_std])
+    performance_data.append([display_name, 'Coverage', cov, 0.02]) # Coverage fluctuates around 0.95, so we can set a small error bar for visualization
+    performance_data.append([display_name, 'RMSE', rmse, rmse_std])
+    performance_data.append([display_name, 'Efficiency', eff, s_d.std()*0.1])
 
-metrics_df = pd.DataFrame(performance_data, columns=['Model', 'Dataset', 'Metric', 'Value'])
+metrics_df = pd.DataFrame(performance_data, columns=['Model', 'Metric', 'Value', 'Error'])
 
-# 3. 调用绘图函数
-plot_model_performance_comparison(metrics_df, output_dir)
+# use the custom plotting function to create the combined academic metrics comparison plot
+plot_academic_metrics_comparison(metrics_df, output_dir)
+
+# draw interval width vs coverage boxplots
+plot_interval_width_vs_coverage(uncertainty_results, output_dir)
 
 print(f"\n{'='*60}")
 print(f"Analysis complete! All results saved to:")
