@@ -17,7 +17,7 @@ import matplotlib.lines as mlines
 
 # ============ CONFIGURATION ============
 # choose the type: "phys_T,P_TDA", "phys", "T,P", "TDA", "phys_T,P", "phys_TDA"
-ANALYSIS_MODE = "phys_TDA"
+ANALYSIS_MODE = "phys"
 
 # mode config settings
 MODE_CONFIG = {
